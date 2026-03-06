@@ -1,0 +1,127 @@
+---
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="Volunteer | Tim Dorr for Georgia">
+  <main class="flex grow flex-col items-center justify-center bg-white py-24">
+    <div class="mx-auto max-w-3xl space-y-12 px-4 text-center sm:px-6 lg:px-8">
+      <div class="space-y-4">
+        <h1 class="text-4xl font-black tracking-tight text-balance text-slate-900 uppercase sm:text-6xl">
+          Join the Team
+        </h1>
+        <div class="mx-auto h-2 w-20 rounded-full bg-red-600"></div>
+        <p class="text-xl font-medium text-balance text-slate-600">
+          Help us build a stronger Georgia. Sign up to volunteer and make your voice heard in House District 53.
+        </p>
+      </div>
+
+      <div class="rounded-3xl border border-slate-200 bg-slate-50 p-8 text-left shadow-sm sm:p-12">
+        <form class="space-y-6">
+          <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+            <div class="space-y-2">
+              <label for="firstName" class="text-xs font-black tracking-widest text-slate-500 uppercase"
+                >First Name</label
+              >
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                required
+                class="w-full rounded-xl border border-slate-300 px-4 py-3 transition-all outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/20"
+              />
+            </div>
+            <div class="space-y-2">
+              <label for="lastName" class="text-xs font-black tracking-widest text-slate-500 uppercase">Last Name</label
+              >
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                required
+                class="w-full rounded-xl border border-slate-300 px-4 py-3 transition-all outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/20"
+              />
+            </div>
+          </div>
+          <div class="space-y-2">
+            <label for="email" class="text-xs font-black tracking-widest text-slate-500 uppercase">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="w-full rounded-xl border border-slate-300 px-4 py-3 transition-all outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/20"
+            />
+          </div>
+          <div class="space-y-2">
+            <label for="phone" class="text-xs font-black tracking-widest text-slate-500 uppercase"
+              >Phone Number (Optional)</label
+            >
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              class="w-full rounded-xl border border-slate-300 px-4 py-3 transition-all outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/20"
+            />
+          </div>
+          <div class="space-y-4 pt-4">
+            <label class="block text-xs font-black tracking-widest text-slate-500 uppercase"
+              >How would you like to help?</label
+            >
+            <div class="space-y-3">
+              <label class="group flex cursor-pointer items-center gap-3">
+                <input
+                  type="checkbox"
+                  name="interest"
+                  value="door-knocking"
+                  class="h-5 w-5 rounded border-slate-300 text-blue-600 focus:ring-blue-500"
+                />
+                <span class="font-medium text-slate-700 transition-colors group-hover:text-slate-900"
+                  >Door Knocking</span
+                >
+              </label>
+              <label class="group flex cursor-pointer items-center gap-3">
+                <input
+                  type="checkbox"
+                  name="interest"
+                  value="phone-banking"
+                  class="h-5 w-5 rounded border-slate-300 text-blue-600 focus:ring-blue-500"
+                />
+                <span class="font-medium text-slate-700 transition-colors group-hover:text-slate-900"
+                  >Phone Banking</span
+                >
+              </label>
+              <label class="group flex cursor-pointer items-center gap-3">
+                <input
+                  type="checkbox"
+                  name="interest"
+                  value="host-event"
+                  class="h-5 w-5 rounded border-slate-300 text-blue-600 focus:ring-blue-500"
+                />
+                <span class="font-medium text-slate-700 transition-colors group-hover:text-slate-900"
+                  >Hosting an Event</span
+                >
+              </label>
+              <label class="group flex cursor-pointer items-center gap-3">
+                <input
+                  type="checkbox"
+                  name="interest"
+                  value="data-entry"
+                  class="h-5 w-5 rounded border-slate-300 text-blue-600 focus:ring-blue-500"
+                />
+                <span class="font-medium text-slate-700 transition-colors group-hover:text-slate-900"
+                  >Data Entry / Office Work</span
+                >
+              </label>
+            </div>
+          </div>
+          <button
+            type="submit"
+            class="mt-8 w-full rounded-xl bg-red-600 py-4 font-black tracking-widest text-white uppercase shadow-xl shadow-red-900/20 transition-all hover:bg-red-700"
+          >
+            Sign Up
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+</Layout>

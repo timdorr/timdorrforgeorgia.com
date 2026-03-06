@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+const donationAmounts = [10, 25, 50, 100, 250, 500, 1000]
+---
+
+<Layout title="Donate | Tim Dorr for Georgia">
+  <main class="flex grow flex-col items-center justify-center bg-white py-24">
+    <div class="mx-auto max-w-3xl space-y-12 px-4 text-center sm:px-6 lg:px-8">
+      <div class="space-y-4">
+        <h1 class="text-4xl font-black tracking-tight text-balance text-slate-900 uppercase sm:text-6xl">
+          Support the Campaign
+        </h1>
+        <div class="mx-auto h-2 w-20 rounded-full bg-red-600 text-balance"></div>
+        <p class="text-xl font-medium text-slate-600">
+          Your contribution helps us reach voters across District 53 and build a stronger Georgia.
+        </p>
+      </div>
+
+      <div class="space-y-8 rounded-3xl border border-slate-200 bg-slate-50 p-8 shadow-sm sm:p-12">
+        <div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
+          {
+            donationAmounts.map((amount) => (
+              <button class="rounded-xl border-2 border-slate-300 py-4 text-lg font-black text-slate-700 transition-all hover:border-blue-600 hover:bg-blue-50 hover:text-blue-600">
+                ${amount}
+              </button>
+            ))
+          }
+          <button
+            class="rounded-xl border-2 border-slate-300 py-4 text-lg font-black text-slate-700 transition-all hover:border-blue-600 hover:bg-blue-50 hover:text-blue-600"
+          >
+            Other
+          </button>
+        </div>
+
+        <div class="pt-4">
+          <a
+            href="#"
+            class="inline-block w-full rounded-xl bg-red-600 py-5 text-lg font-black tracking-widest text-white uppercase shadow-xl shadow-red-900/20 transition-all hover:bg-red-700"
+          >
+            Continue to Donate
+          </a>
+        </div>
+
+        <div class="space-y-2 rounded-xl border border-slate-200 bg-white p-6 text-left text-xs text-slate-500">
+          <p class="font-bold tracking-widest text-slate-900 uppercase">Contribution Rules</p>
+          <ul class="list-inside list-disc space-y-1 leading-relaxed">
+            <li>I am at least eighteen years old.</li>
+            <li>
+              This contribution is made from my own funds, and funds are not being provided to me by another person or
+              entity for the purpose of making this contribution.
+            </li>
+            <li>I am a U.S. citizen or lawfully admitted permanent resident (i.e., green card holder).</li>
+            <li>Contributions are not tax deductible for federal income tax purposes.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

@@ -1,0 +1,46 @@
+---
+const year = new Date().getFullYear()
+---
+
+<footer class="bg-slate-900 py-16 text-slate-400">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div
+      class="flex flex-col items-start justify-between gap-12 border-b border-slate-800 pb-12 md:flex-row md:items-center"
+    >
+      <div class="space-y-4">
+        <a href="/" class="block text-2xl font-black tracking-tighter text-white uppercase">
+          Tim <span class="text-red-600">Dorr</span>
+        </a>
+        <p class="max-w-xs text-sm">Building a better, stronger future for Georgia House District 53.</p>
+      </div>
+      <div class="flex flex-wrap gap-8">
+        <div class="space-y-4">
+          <h4 class="text-xs font-bold tracking-widest text-white uppercase">Explore</h4>
+          <nav class="flex flex-col gap-2 text-sm">
+            <a href="/about" class="transition-colors hover:text-white">About Tim</a>
+            <a href="/issues" class="transition-colors hover:text-white">Our Priorities</a>
+            <a href="/volunteer" class="transition-colors hover:text-white">Volunteer</a>
+            <a href="/donate" class="transition-colors hover:text-white">Donate</a>
+          </nav>
+        </div>
+        <div class="space-y-4">
+          <h4 class="text-xs font-bold tracking-widest text-white uppercase">Connect</h4>
+          <nav class="flex flex-col gap-2 text-sm">
+            <a href="#" class="transition-colors hover:text-white">Facebook</a>
+            <a href="#" class="transition-colors hover:text-white">Twitter / X</a>
+            <a href="#" class="transition-colors hover:text-white">Instagram</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center justify-between gap-8 pt-12 md:flex-row">
+      <div
+        class="rounded-sm border-2 border-slate-700 px-6 py-4 text-center text-xs font-bold tracking-[0.2em] uppercase"
+      >
+        Paid for by Tim Dorr for Georgia
+      </div>
+      <div class="text-xs">&copy; {year} Tim Dorr for Georgia. All rights reserved.</div>
+    </div>
+  </div>
+</footer>

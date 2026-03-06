@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import portrait from '../assets/portrait.jpg';
+import family from '../assets/family.jpg';
+---
+
+<Layout title="About Tim Dorr | Tim Dorr for Georgia">
+  <main class="bg-white py-24">
+    <div class="mx-auto max-w-4xl space-y-12 px-4 sm:px-6 lg:px-8">
+      <div class="space-y-4">
+        <h1 class="text-4xl font-black tracking-tight text-balance text-slate-900 uppercase sm:text-5xl">
+          Meet Tim Dorr
+        </h1>
+        <div class="h-2 w-20 rounded-full bg-red-600"></div>
+      </div>
+
+      <div
+        class="flex aspect-video items-center justify-center overflow-hidden rounded-3xl border border-slate-200 bg-slate-100 text-slate-400"
+      >
+        <Image src={portrait} alt="Tim Dorr" class="h-full w-full object-cover object-top" />
+      </div>
+
+      <div class="prose prose-slate prose-lg max-w-none space-y-6 leading-relaxed text-slate-600">
+        <p class="text-xl font-bold text-balance text-slate-900 italic">
+          "Georgia is more than just a place to live; it's our community, our home, and our future."
+        </p>
+
+        <p>
+          Tim Dorr is a dedicated community leader with a passion for public service. He has spent his career
+          [Placeholder: professional background, e.g., working in technology and building communities]. Now, he's
+          stepping up to represent House District 53 in the Georgia State House.
+        </p>
+
+        <h2 class="pt-8 text-2xl font-black text-slate-900 uppercase">A Lifelong Commitment to Georgia</h2>
+        <p>
+          [Placeholder: Add details about Tim's history in Georgia, his connection to the local community, and specific
+          local organizations or initiatives he has been involved with.]
+        </p>
+
+        <h2 class="pt-8 text-2xl font-black text-slate-900 uppercase">Why I'm Running</h2>
+        <p>
+          [Placeholder: Discuss the core motivation for the campaign. Is it education? Infrastructure? Healthcare?
+          Explain the "why" behind the candidacy.]
+        </p>
+
+        <p>
+          "I believe that we need representatives who are focused on results, not rhetoric. We need a State House that
+          works for every Georgian, regardless of their zip code."
+        </p>
+
+        <div class="grid grid-cols-1 gap-6 py-12 sm:grid-cols-2">
+          <div
+            class="flex aspect-square items-center justify-center overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 text-slate-400"
+          >
+            <Image
+              src={family}
+              alt="Tim Dorr and family"
+              class="h-full w-full object-cover" />
+          </div>
+          <div
+            class="flex aspect-square items-center justify-center rounded-2xl border border-slate-200 bg-slate-100 text-slate-400"
+          >
+            [Professional/Community Photo]
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
