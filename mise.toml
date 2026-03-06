@@ -1,2 +1,5 @@
 [tools]
 node = "24"
+
+[tasks.dev]
+run = "pnpm dev"
