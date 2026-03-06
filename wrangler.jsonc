@@ -1,6 +1,6 @@
 {
 	"main": "dist/_worker.js/index.js",
-	"name": "timdorrforgeorgia-com",
+	"name": "timdorrforgeorgia-site",
   "compatibility_date": "2026-03-06",
   "compatibility_flags": [
     "nodejs_compat",
