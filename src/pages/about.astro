@@ -1,8 +1,9 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { Image } from 'astro:assets';
-import portrait from '../assets/portrait.jpg';
-import family from '../assets/family.jpg';
+import Layout from '../layouts/Layout.astro'
+import { Image } from 'astro:assets'
+import portrait from '../assets/portrait.jpg'
+import family from '../assets/family.jpg'
+import professional from '../assets/professional.jpg'
 ---
 
 <Layout title="About Tim Dorr | Tim Dorr for Georgia">
@@ -18,7 +19,7 @@ import family from '../assets/family.jpg';
       <div
         class="flex aspect-video items-center justify-center overflow-hidden rounded-3xl border border-slate-200 bg-slate-100 text-slate-400"
       >
-        <Image src={portrait} alt="Tim Dorr" class="h-full w-full object-cover object-top" />
+        <Image src={portrait} alt="Tim Dorr" class="h-full w-full object-cover object-[50%_20%]" />
       </div>
 
       <div class="prose prose-slate prose-lg max-w-none space-y-6 leading-relaxed text-slate-600">
@@ -53,15 +54,12 @@ import family from '../assets/family.jpg';
           <div
             class="flex aspect-square items-center justify-center overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 text-slate-400"
           >
-            <Image
-              src={family}
-              alt="Tim Dorr and family"
-              class="h-full w-full object-cover" />
+            <Image src={family} alt="Tim Dorr and family" class="h-full w-full object-cover" />
           </div>
           <div
-            class="flex aspect-square items-center justify-center rounded-2xl border border-slate-200 bg-slate-100 text-slate-400"
+            class="flex aspect-square items-center justify-center overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 text-slate-400"
           >
-            [Professional/Community Photo]
+            <Image src={professional} alt="Tim Dorr professional" class="h-full w-full object-cover" />
           </div>
         </div>
       </div>
