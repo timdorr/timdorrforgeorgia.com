@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import { Image } from 'astro:assets'
+import { Picture } from 'astro:assets'
 import portrait from '../assets/portrait.jpg'
 import family from '../assets/family.jpg'
 import professional from '../assets/professional.jpg'
@@ -10,17 +10,22 @@ import professional from '../assets/professional.jpg'
   <main class="bg-white py-24">
     <div class="mx-auto max-w-4xl space-y-12 px-4 sm:px-6 lg:px-8">
       <div class="space-y-4">
-        <h1 class="text-4xl font-black tracking-tight text-balance uppercase sm:text-5xl">
-          Meet Tim Dorr
-        </h1>
-        <div class="h-2 w-20 rounded-full bg-brand-orange"></div>
-
+        <h1 class="text-4xl font-black tracking-tight text-balance uppercase sm:text-5xl">Meet Tim Dorr</h1>
+        <div class="bg-brand-orange h-2 w-20 rounded-full"></div>
       </div>
 
       <div
         class="flex aspect-video items-center justify-center overflow-hidden rounded-3xl border border-slate-200 bg-slate-100 text-slate-400"
       >
-        <Image src={portrait} alt="Tim Dorr" class="h-full w-full object-cover object-[50%_20%]" />
+        <Picture
+          src={portrait}
+          formats={['webp', 'avif']}
+          fallbackFormat="jpeg"
+          widths={[400, 800, 1200]}
+          sizes="(max-width: 800px) 100vw, 800px"
+          alt="Tim Dorr"
+          class="h-full w-full object-cover object-[50%_20%]"
+        />
       </div>
 
       <div class="prose prose-lg max-w-none space-y-6 leading-relaxed">
@@ -55,12 +60,28 @@ import professional from '../assets/professional.jpg'
           <div
             class="flex aspect-square items-center justify-center overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 text-slate-400"
           >
-            <Image src={family} alt="Tim Dorr and family" class="h-full w-full object-cover" />
+            <Picture
+              src={family}
+              formats={['webp', 'avif']}
+              fallbackFormat="jpeg"
+              widths={[400, 800]}
+              sizes="(max-width: 640px) 100vw, 400px"
+              alt="Tim Dorr and family"
+              class="h-full w-full object-cover"
+            />
           </div>
           <div
             class="flex aspect-square items-center justify-center overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 text-slate-400"
           >
-            <Image src={professional} alt="Tim Dorr professional" class="h-full w-full object-cover" />
+            <Picture
+              src={professional}
+              formats={['webp', 'avif']}
+              fallbackFormat="jpeg"
+              widths={[400, 800]}
+              sizes="(max-width: 640px) 100vw, 400px"
+              alt="Tim Dorr professional"
+              class="h-full w-full object-cover"
+            />
           </div>
         </div>
       </div>
