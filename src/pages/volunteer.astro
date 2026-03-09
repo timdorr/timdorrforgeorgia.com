@@ -6,10 +6,10 @@ import Layout from '../layouts/Layout.astro'
   <main class="flex grow flex-col items-center justify-center bg-white py-24">
     <div class="mx-auto max-w-3xl space-y-12 px-4 text-center sm:px-6 lg:px-8">
       <div class="space-y-4">
-        <h1 class="text-4xl font-black tracking-tight text-balance text-slate-900 uppercase sm:text-6xl">
+        <h1 class="text-4xl font-black tracking-tight text-balance uppercase sm:text-6xl">
           Join the Team
         </h1>
-        <div class="mx-auto h-2 w-20 rounded-full bg-red-600"></div>
+        <div class="mx-auto h-2 w-20 rounded-full bg-brand-orange"></div>
         <p class="text-xl font-medium text-balance text-slate-600">
           Help us build a stronger Georgia. Sign up to volunteer and make your voice heard in House District 53.
         </p>
@@ -27,7 +27,7 @@ import Layout from '../layouts/Layout.astro'
                 id="firstName"
                 name="firstName"
                 required
-                class="w-full rounded-xl border border-slate-300 px-4 py-3 transition-all outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/20"
+                class="w-full rounded-xl border border-slate-300 px-4 py-3 transition-all outline-none focus:border-brand-blue focus:ring-4 focus:ring-brand-blue/20"
               />
             </div>
             <div class="space-y-2">
@@ -38,7 +38,7 @@ import Layout from '../layouts/Layout.astro'
                 id="lastName"
                 name="lastName"
                 required
-                class="w-full rounded-xl border border-slate-300 px-4 py-3 transition-all outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/20"
+                class="w-full rounded-xl border border-slate-300 px-4 py-3 transition-all outline-none focus:border-brand-blue focus:ring-4 focus:ring-brand-blue/20"
               />
             </div>
           </div>
@@ -49,7 +49,7 @@ import Layout from '../layouts/Layout.astro'
               id="email"
               name="email"
               required
-              class="w-full rounded-xl border border-slate-300 px-4 py-3 transition-all outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/20"
+              class="w-full rounded-xl border border-slate-300 px-4 py-3 transition-all outline-none focus:border-brand-blue focus:ring-4 focus:ring-brand-blue/20"
             />
           </div>
           <div class="space-y-2">
@@ -60,7 +60,7 @@ import Layout from '../layouts/Layout.astro'
               type="tel"
               id="phone"
               name="phone"
-              class="w-full rounded-xl border border-slate-300 px-4 py-3 transition-all outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/20"
+              class="w-full rounded-xl border border-slate-300 px-4 py-3 transition-all outline-none focus:border-brand-blue focus:ring-4 focus:ring-brand-blue/20"
             />
           </div>
           <div class="space-y-4 pt-4">
@@ -73,9 +73,9 @@ import Layout from '../layouts/Layout.astro'
                   type="checkbox"
                   name="interest"
                   value="door-knocking"
-                  class="h-5 w-5 rounded border-slate-300 text-blue-600 focus:ring-blue-500"
+                  class="h-5 w-5 rounded border-slate-300 text-brand-blue focus:ring-brand-blue"
                 />
-                <span class="font-medium text-slate-700 transition-colors group-hover:text-slate-900"
+                <span class="font-medium text-slate-700 transition-colors group-hover:text-brand-navy"
                   >Door Knocking</span
                 >
               </label>
@@ -84,9 +84,9 @@ import Layout from '../layouts/Layout.astro'
                   type="checkbox"
                   name="interest"
                   value="phone-banking"
-                  class="h-5 w-5 rounded border-slate-300 text-blue-600 focus:ring-blue-500"
+                  class="h-5 w-5 rounded border-slate-300 text-brand-blue focus:ring-brand-blue"
                 />
-                <span class="font-medium text-slate-700 transition-colors group-hover:text-slate-900"
+                <span class="font-medium text-slate-700 transition-colors group-hover:text-brand-navy"
                   >Phone Banking</span
                 >
               </label>
@@ -95,9 +95,9 @@ import Layout from '../layouts/Layout.astro'
                   type="checkbox"
                   name="interest"
                   value="host-event"
-                  class="h-5 w-5 rounded border-slate-300 text-blue-600 focus:ring-blue-500"
+                  class="h-5 w-5 rounded border-slate-300 text-brand-blue focus:ring-brand-blue"
                 />
-                <span class="font-medium text-slate-700 transition-colors group-hover:text-slate-900"
+                <span class="font-medium text-slate-700 transition-colors group-hover:text-brand-navy"
                   >Hosting an Event</span
                 >
               </label>
@@ -106,9 +106,9 @@ import Layout from '../layouts/Layout.astro'
                   type="checkbox"
                   name="interest"
                   value="data-entry"
-                  class="h-5 w-5 rounded border-slate-300 text-blue-600 focus:ring-blue-500"
+                  class="h-5 w-5 rounded border-slate-300 text-brand-blue focus:ring-brand-blue"
                 />
-                <span class="font-medium text-slate-700 transition-colors group-hover:text-slate-900"
+                <span class="font-medium text-slate-700 transition-colors group-hover:text-brand-navy"
                   >Data Entry / Office Work</span
                 >
               </label>
@@ -116,7 +116,7 @@ import Layout from '../layouts/Layout.astro'
           </div>
           <button
             type="submit"
-            class="mt-8 w-full rounded-xl bg-red-600 py-4 font-black tracking-widest text-white uppercase shadow-xl shadow-red-900/20 transition-all hover:bg-red-700"
+            class="mt-8 w-full rounded-xl bg-brand-orange py-4 font-black tracking-widest text-white uppercase shadow-xl shadow-brand-orange/20 transition-all hover:bg-brand-orange/90"
           >
             Sign Up
           </button>
