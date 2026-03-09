@@ -36,11 +36,61 @@ const { class: className } = Astro.props
     </div>
 
     <div class="md:hidden">
-      <button type="button" class="p-2 text-slate-900">
+      <button id="mobile-menu-button" type="button" class="p-2 text-slate-900" aria-label="Toggle Menu">
         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"
+          ></path>
+          <path
+            id="close-icon"
+            class="hidden"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"></path>
         </svg>
       </button>
     </div>
   </nav>
+
+  <!-- Mobile Menu Panel -->
+  <div id="mobile-menu" class="hidden border-t border-slate-200 bg-white md:hidden">
+    <div class="flex flex-col gap-4 p-4 text-center">
+      <a
+        href="/about"
+        class="rounded-lg py-3 text-sm font-semibold tracking-wider text-slate-600 uppercase transition-colors hover:bg-slate-50 hover:text-brand-blue"
+        >About</a
+      >
+      <a
+        href="/issues"
+        class="rounded-lg py-3 text-sm font-semibold tracking-wider text-slate-600 uppercase transition-colors hover:bg-slate-50 hover:text-brand-blue"
+        >Issues</a
+      >
+      <a
+        href="/volunteer"
+        class="rounded-lg py-3 text-sm font-semibold tracking-wider text-slate-600 uppercase transition-colors hover:bg-slate-50 hover:text-brand-blue"
+        >Volunteer</a
+      >
+      <a
+        href="/donate"
+        class="mt-2 rounded-xl bg-brand-orange py-4 text-sm font-bold tracking-widest text-white uppercase shadow-md transition-all hover:bg-brand-orange/90"
+      >
+        Donate
+      </a>
+    </div>
+  </div>
 </header>
+
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button')
+  const mobileMenu = document.getElementById('mobile-menu')
+  const menuIcon = document.getElementById('menu-icon')
+  const closeIcon = document.getElementById('close-icon')
+
+  if (mobileMenuButton && mobileMenu && menuIcon && closeIcon) {
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden')
+      menuIcon.classList.toggle('hidden')
+      closeIcon.classList.toggle('hidden')
+    })
+  }
+</script>
