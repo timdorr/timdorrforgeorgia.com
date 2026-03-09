@@ -13,11 +13,11 @@ import professional from '../assets/professional.jpg'
       <!-- Visual flair -->
       <div class="absolute inset-0 z-0 opacity-20">
         <div
-          class="absolute top-0 left-0 h-full w-full bg-[radial-gradient(circle_at_20%_30%,#3b82f6_0%,transparent_50%)]"
+          class="absolute top-0 left-0 h-full w-full bg-[radial-gradient(circle_at_20%_30%,var(--color-brand-blue)_0%,transparent_50%)]"
         >
         </div>
         <div
-          class="absolute right-0 bottom-0 h-full w-full bg-[radial-gradient(circle_at_80%_70%,#ef4444_0%,transparent_50%)]"
+          class="absolute right-0 bottom-0 h-full w-full bg-[radial-gradient(circle_at_80%_70%,var(--color-brand-orange)_0%,transparent_50%)]"
         >
         </div>
       </div>
@@ -27,37 +27,37 @@ import professional from '../assets/professional.jpg'
       >
         <div class="flex-1 space-y-8">
           <div
-            class="inline-flex items-center gap-2 rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1 text-xs font-bold tracking-widest text-blue-400 uppercase"
+            class="inline-flex items-center gap-2 rounded-full border border-brand-blue/30 bg-brand-blue/20 px-3 py-1 text-xs font-bold tracking-widest text-white uppercase"
           >
-            <span class="h-2 w-2 animate-pulse rounded-full bg-blue-500"></span>
+            <span class="h-2 w-2 animate-pulse rounded-full bg-brand-orange"></span>
             Running for Georgia State House
           </div>
           <h1 class="text-5xl leading-tight font-black tracking-tight uppercase sm:text-7xl">
-            Tim <span class="text-blue-500">Dorr</span>
+            <span class="text-white">Tim Dorr</span>
             <br />
-            <span class="text-white">for Georgia</span>
+            <span class="text-brand-orange">for Georgia</span>
           </h1>
-          <p class="max-w-2xl text-xl leading-relaxed font-medium text-slate-300 sm:text-2xl">
+          <p class="max-w-2xl text-xl leading-relaxed font-medium text-slate-200 sm:text-2xl">
             A new voice for House District 53. Committed to progress, transparency, and a stronger Georgia for all our
             families.
           </p>
           <div class="flex flex-col gap-4 pt-4 sm:flex-row">
             <a
               href="/donate"
-              class="rounded-xl bg-red-600 px-8 py-4 text-center text-lg font-black tracking-widest text-white uppercase shadow-xl shadow-red-900/20 transition-all hover:bg-red-700"
+              class="rounded-xl bg-brand-orange px-8 py-4 text-center text-lg font-black tracking-widest text-white uppercase shadow-xl shadow-brand-orange/20 transition-all hover:bg-brand-orange/90"
             >
               Donate Now
             </a>
             <a
               href="/volunteer"
-              class="rounded-xl bg-white px-8 py-4 text-center text-lg font-black tracking-widest text-slate-900 uppercase transition-all hover:bg-slate-100"
+              class="rounded-xl bg-white px-8 py-4 text-center text-lg font-black tracking-widest text-brand-navy uppercase transition-all hover:bg-slate-100"
             >
               Get Involved
             </a>
           </div>
         </div>
         <div
-          class="relative aspect-[3/4] w-full max-w-md flex-1 overflow-hidden rounded-3xl border border-slate-700 bg-slate-800 shadow-2xl"
+          class="relative aspect-[3/4] w-full max-w-md flex-1 overflow-hidden rounded-3xl border border-white/10 bg-slate-800 shadow-2xl"
         >
           <Image src={portrait} alt="Tim Dorr" class="h-full w-full object-cover" />
         </div>
@@ -81,7 +81,7 @@ import professional from '../assets/professional.jpg'
             <div class="pt-4">
               <a
                 href="/about"
-                class="inline-flex items-center gap-2 text-sm font-bold tracking-widest text-blue-600 uppercase hover:underline"
+                class="inline-flex items-center gap-2 text-sm font-bold tracking-widest text-brand-blue uppercase hover:underline"
               >
                 Read the full story
                 <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -192,7 +192,7 @@ import professional from '../assets/professional.jpg'
         <div class="mt-12 border-t border-slate-200 pt-12 text-center">
           <a
             href="/issues"
-            class="inline-flex items-center gap-2 text-sm font-bold tracking-widest text-blue-600 uppercase hover:underline"
+            class="inline-flex items-center gap-2 text-sm font-bold tracking-widest text-brand-blue uppercase hover:underline"
           >
             View all positions
             <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -204,11 +204,11 @@ import professional from '../assets/professional.jpg'
     </section>
 
     <!-- CTA Section -->
-    <section id="volunteer" class="relative overflow-hidden bg-blue-700 py-24 text-white">
+    <section id="volunteer" class="relative overflow-hidden bg-brand-blue py-24 text-white">
       <div class="absolute inset-0 z-0">
-        <div class="absolute inset-0 bg-blue-800 mix-blend-multiply"></div>
+        <div class="absolute inset-0 bg-brand-navy/60 mix-blend-multiply"></div>
         <div
-          class="absolute top-0 left-0 h-full w-full bg-[radial-gradient(circle_at_10%_10%,#ef4444_0%,transparent_40%)] opacity-30"
+          class="absolute top-0 left-0 h-full w-full bg-[radial-gradient(circle_at_10%_10%,var(--color-brand-orange)_0%,transparent_40%)] opacity-30"
         >
         </div>
       </div>
@@ -217,20 +217,20 @@ import professional from '../assets/professional.jpg'
         <h2 class="text-4xl leading-tight font-black tracking-tight uppercase sm:text-5xl">
           Join the Team <br />for House District 53
         </h2>
-        <p class="text-xl font-medium text-blue-100">
+        <p class="text-xl font-medium text-slate-100">
           This campaign is powered by neighbors like you. Whether you can knock on doors, host an event, or make calls,
           your support makes the difference.
         </p>
         <div class="flex flex-col justify-center gap-4 pt-4 sm:flex-row">
           <a
             href="/volunteer"
-            class="rounded-xl bg-white px-10 py-4 text-center font-black tracking-widest text-blue-700 uppercase shadow-xl shadow-blue-900/40 transition-all"
+            class="rounded-xl bg-white px-10 py-4 text-center font-black tracking-widest text-brand-navy uppercase shadow-xl shadow-brand-navy/20 transition-all hover:bg-slate-50"
           >
             Sign Up to Volunteer
           </a>
           <a
             href="/donate"
-            class="rounded-xl bg-red-600 px-10 py-4 text-center font-black tracking-widest text-white uppercase shadow-xl shadow-red-900/40 transition-all hover:bg-red-700"
+            class="rounded-xl bg-brand-orange px-10 py-4 text-center font-black tracking-widest text-white uppercase shadow-xl shadow-brand-orange/20 transition-all hover:bg-brand-orange/90"
           >
             Donate Now
           </a>
