@@ -5,11 +5,20 @@ import '../styles/global.css'
 
 interface Props {
   title?: string
+  description?: string
   hideNav?: boolean
   hideFooter?: boolean
 }
 
-const { title = 'Tim Dorr for Georgia', hideNav = false, hideFooter = false } = Astro.props
+const {
+  title = 'Tim Dorr for Georgia',
+  description = 'Tim Dorr is running for the Georgia State House to be your voice in the Capitol. Fighting for Sandy Springs, Buckhead, and Roswell.',
+  hideNav = false,
+  hideFooter = false,
+} = Astro.props
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://timdorrforgeorgia.com')
+const socialImageURL = new URL('/og-image.png', Astro.site || 'https://timdorrforgeorgia.com')
 ---
 
 <!doctype html>
@@ -19,7 +28,28 @@ const { title = 'Tim Dorr for Georgia', hideNav = false, hideFooter = false } = 
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Primary Meta Tags -->
     <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={socialImageURL} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={socialImageURL} />
   </head>
   <body class="flex min-h-screen flex-col">
     {!hideNav && <Navigation />}
