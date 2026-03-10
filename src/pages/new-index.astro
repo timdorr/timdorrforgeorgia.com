@@ -4,7 +4,7 @@ import { Picture } from 'astro:assets'
 import portrait from '../assets/portrait.jpg'
 import family from '../assets/family.jpg'
 import professional from '../assets/professional.jpg'
-import mapSvg from '../assets/district-53-map.svg?url'
+import mapData from '../data/map.json'
 ---
 
 <link
@@ -297,7 +297,7 @@ import mapSvg from '../assets/district-53-map.svg?url'
     </section>
   </main>
 
-  <script is:inline define:vars={{ mapSvg }}>
+  <script is:inline define:vars={{ mapData }}>
     document.addEventListener('DOMContentLoaded', () => {
       // Initialize map centered on Sandy Springs/North Atlanta
       const map = L.map('map', { zoomControl: false }).setView([33.936, -84.3827], 11)
@@ -313,15 +313,20 @@ import mapSvg from '../assets/district-53-map.svg?url'
         maxZoom: 20,
       }).addTo(map)
 
-      // SVG Overlay
-      // Rough bounds for District 53 (Sandy Springs to Buckhead area)
-      const bounds = [
-        [34.04678567484358, -84.32826251675225],
-        [33.81972212885792, -84.44864384100178],
-      ]
-      L.imageOverlay(mapSvg, bounds, {
+      // Add GeoJSON Layer
+      const geojsonLayer = L.geoJSON(mapData, {
+        style: {
+          color: '#f39357', // brand-orange
+          weight: 2,
+          opacity: 1,
+          fillColor: '#185f9c', // brand-blue
+          fillOpacity: 0.2,
+        },
         interactive: false,
       }).addTo(map)
+
+      // Automatically fit map to district boundaries
+      map.fitBounds(geojsonLayer.getBounds(), { padding: [20, 20] })
     })
   </script>
 </Layout>
