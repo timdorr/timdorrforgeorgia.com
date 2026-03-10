@@ -51,7 +51,7 @@ const socialImageURL = new URL('/og-image.png', Astro.site || 'https://timdorrfo
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={socialImageURL} />
   </head>
-  <body class="flex min-h-screen flex-col">
+  <body class="flex min-h-screen flex-col overflow-x-hidden">
     {!hideNav && <Navigation />}
     <slot />
     {!hideFooter && <Footer class="mt-auto" />}
