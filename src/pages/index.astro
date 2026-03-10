@@ -2,266 +2,74 @@
 import Layout from '../layouts/Layout.astro'
 import { Picture } from 'astro:assets'
 import portrait from '../assets/portrait.jpg'
-import family from '../assets/family.jpg'
-import professional from '../assets/professional.jpg'
+import logo from '../assets/logo.png'
 ---
 
-<Layout>
-  <main>
-    <!-- Hero Section -->
-    <section class="relative overflow-hidden bg-slate-900 py-24 text-white sm:py-32">
-      <!-- Visual flair -->
-      <div class="absolute inset-0 z-0 opacity-20">
-        <div
-          class="absolute top-0 left-0 h-full w-full bg-[radial-gradient(circle_at_20%_30%,var(--color-brand-blue)_0%,transparent_50%)]"
-        >
-        </div>
-        <div
-          class="absolute right-0 bottom-0 h-full w-full bg-[radial-gradient(circle_at_80%_70%,var(--color-brand-orange)_0%,transparent_50%)]"
-        >
-        </div>
-      </div>
+<Layout hideNav hideFooter>
+  <main class="bg-brand-light-blue text-brand-navy flex min-h-screen flex-col justify-center py-12">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col items-center gap-12 lg:flex-row">
+        <!-- Text Content -->
+        <div class="flex-1 space-y-6 text-center lg:text-left">
+          <Picture
+            src={logo}
+            formats={['webp', 'avif']}
+            fallbackFormat="png"
+            widths={[300, 600]}
+            sizes="(max-width: 600px) 100vw, 600px"
+            alt="Tim Dorr for Georgia Logo"
+            class="mx-auto h-auto w-full max-w-md lg:mx-0"
+          />
 
-      <div
-        class="relative z-10 mx-auto flex max-w-7xl flex-col items-center gap-12 px-4 text-center sm:px-6 lg:flex-row lg:px-8 lg:text-left"
-      >
-        <div class="flex-1 space-y-8">
-          <div
-            class="border-brand-blue/30 bg-brand-blue/20 inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-bold tracking-widest text-white uppercase"
-          >
-            <span class="bg-brand-orange h-2 w-2 animate-pulse rounded-full"></span>
-            Running for Georgia State House
-          </div>
-          <h1 class="text-5xl leading-tight font-black tracking-tight uppercase sm:text-7xl">
-            <span class="text-white">Tim Dorr</span>
-            <br />
-            <span class="text-brand-orange">for Georgia</span>
+          <h1 class="text-3xl font-black tracking-tight uppercase sm:text-5xl">
+            Fighting for <br />
+            <span class="text-brand-orange">Sandy Springs, <br />Buckhead, & Roswell</span>
           </h1>
-          <p class="max-w-2xl text-xl leading-relaxed font-medium text-slate-200 sm:text-2xl">
-            A new voice for House District 53. Committed to progress, transparency, and a stronger Georgia for all our
-            families.
-          </p>
-          <div class="flex flex-col gap-4 pt-4 sm:flex-row">
+
+          <a
+            href="https://sos.ga.gov/sites/default/files/forms/2026%20Short%20Calendar%20.pdf"
+            class="border-brand-orange bg-brand-orange/5 inline-block rounded-2xl border-2 px-8 py-6"
+          >
+            <p class="text-xl font-black tracking-widest uppercase sm:text-2xl">
+              Vote in the <br />
+              <span class="text-brand-orange">May 19th</span>
+              <br />
+              Democratic Primary
+            </p>
+          </a>
+
+          <div class="flex flex-col justify-center gap-4 pt-6 sm:flex-row lg:justify-start">
             <a
-              href="/donate"
+              href="https://mvp.sos.ga.gov/s/"
+              class="bg-brand-navy hover:bg-brand-navy/90 rounded-xl px-8 py-4 text-center text-lg font-black tracking-widest text-white uppercase transition-all"
+            >
+              Check Your Registration
+            </a>
+            <a
+              href="https://georgia.gov/register-vote"
               class="bg-brand-orange shadow-brand-orange/20 hover:bg-brand-orange/90 rounded-xl px-8 py-4 text-center text-lg font-black tracking-widest text-white uppercase shadow-xl transition-all"
             >
-              Donate Now
-            </a>
-            <a
-              href="/volunteer"
-              class="text-brand-navy rounded-xl bg-white px-8 py-4 text-center text-lg font-black tracking-widest uppercase transition-all hover:bg-slate-100"
-            >
-              Get Involved
+              Register to Vote
             </a>
           </div>
         </div>
-        <div
-          class="relative aspect-[3/4] w-full max-w-md flex-1 overflow-hidden rounded-3xl border border-white/10 bg-slate-800 shadow-2xl"
-        >
-          <Picture
-            src={portrait}
-            formats={['webp', 'avif']}
-            fallbackFormat="jpeg"
-            widths={[400, 800, 1200]}
-            sizes="(max-width: 768px) 100vw, 448px"
-            alt="Tim Dorr"
-            class="h-full w-full object-cover"
-          />
-        </div>
-      </div>
-    </section>
 
-    <!-- Bio Preview Section -->
-    <section id="about" class="bg-white py-24">
-      <div class="mx-auto flex max-w-7xl flex-col items-center gap-16 px-4 sm:px-6 lg:flex-row lg:px-8">
-        <div class="flex-1 space-y-6">
-          <h2 class="text-3xl font-black tracking-tight text-slate-900 uppercase sm:text-4xl">Meet Tim Dorr</h2>
-          <div class="bg-brand-orange h-2 w-20 rounded-full"></div>
-          <div class="space-y-4 text-lg leading-relaxed text-balance text-slate-600">
-            <p class="font-bold text-slate-900 italic">
-              "Georgia is more than just a place to live; it's our community, our home, and our future."
-            </p>
-            <p>
-              Tim Dorr is a dedicated community leader with a passion for public service. He is running for the State
-              House to represent the hardworking families of District 53.
-            </p>
-            <div class="pt-4">
-              <a
-                href="/about"
-                class="text-brand-blue inline-flex items-center gap-2 text-sm font-bold tracking-widest uppercase hover:underline"
-              >
-                Read the full story
-                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"
-                  ></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="grid w-full flex-1 grid-cols-2 gap-4">
-          <div
-            class="flex aspect-[3/4] items-center justify-center overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 text-slate-400"
-          >
+        <!-- Headshot -->
+        <div class="relative w-full max-w-lg lg:flex-1">
+          <div class="bg-brand-blue/10 absolute -inset-4 rounded-[2rem] blur-2xl"></div>
+          <div class="border-brand-navy/10 relative aspect-[3/4] overflow-hidden rounded-[2rem] border-2 shadow-2xl">
             <Picture
-              src={professional}
+              src={portrait}
               formats={['webp', 'avif']}
               fallbackFormat="jpeg"
-              widths={[400, 800]}
-              sizes="(max-width: 1024px) 50vw, 600px"
-              alt="Tim Dorr professional"
-              pictureAttributes={{class: "h-full w-full object-cover"}}
-              class="h-full w-full object-cover"
-            />
-          </div>
-          <div
-            class="mt-8 flex aspect-[3/4] items-center justify-center overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 text-slate-400"
-          >
-            <Picture
-              src={family}
-              formats={['webp', 'avif']}
-              fallbackFormat="jpeg"
-              widths={[400, 800]}
-              sizes="(max-width: 1024px) 50vw, 600px"
-              alt="Tim Dorr and family"
-              pictureAttributes={{class: "h-full w-full object-cover"}}
+              widths={[400, 800, 1200]}
+              sizes="(max-width: 768px) 100vw, 600px"
+              alt="Tim Dorr"
               class="h-full w-full object-cover"
             />
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Issues Preview Section -->
-    <section id="issues" class="bg-slate-50 py-24">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="mb-16 space-y-4 text-center">
-          <h2 class="text-3xl font-black tracking-tight text-slate-900 uppercase sm:text-4xl">Our Priorities</h2>
-          <p class="mx-auto max-w-3xl text-xl text-slate-600">
-            My priorities are built around the needs of our families and the future of our state.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <!-- Education -->
-          <div
-            class="group rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-shadow hover:shadow-md"
-          >
-            <div
-              class="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 text-blue-700 transition-colors group-hover:bg-blue-600 group-hover:text-white"
-            >
-              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"
-                ></path>
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-                ></path>
-              </svg>
-            </div>
-            <h3 class="mb-3 text-xl font-black text-slate-900 uppercase">Education First</h3>
-            <p class="text-sm leading-relaxed text-slate-600">
-              Investing in our children is an investment in Georgia's future. We must support our teachers and fully
-              fund our schools.
-            </p>
-          </div>
-
-          <!-- Economy -->
-          <div
-            class="group rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-shadow hover:shadow-md"
-          >
-            <div
-              class="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-green-100 text-green-700 transition-colors group-hover:bg-green-600 group-hover:text-white"
-            >
-              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                ></path>
-              </svg>
-            </div>
-            <h3 class="mb-3 text-xl font-black text-slate-900 uppercase">Sustainable Economy</h3>
-            <p class="text-sm leading-relaxed text-slate-600">
-              Strengthening our local economy by supporting small businesses and ensuring quality job growth in District
-              53.
-            </p>
-          </div>
-
-          <!-- Healthcare -->
-          <div
-            class="group rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-shadow hover:shadow-md"
-          >
-            <div
-              class="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-red-100 text-red-700 transition-colors group-hover:bg-red-600 group-hover:text-white"
-            >
-              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                ></path>
-              </svg>
-            </div>
-            <h3 class="mb-3 text-xl font-black text-slate-900 uppercase">Accessible Healthcare</h3>
-            <p class="text-sm leading-relaxed text-slate-600">
-              Expanding access to affordable healthcare and mental health services for every Georgian.
-            </p>
-          </div>
-        </div>
-
-        <div class="mt-12 border-t border-slate-200 pt-12 text-center">
-          <a
-            href="/issues"
-            class="text-brand-blue inline-flex items-center gap-2 text-sm font-bold tracking-widest uppercase hover:underline"
-          >
-            View all positions
-            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section id="volunteer" class="bg-brand-blue relative overflow-hidden py-24 text-white">
-      <div class="absolute inset-0 z-0">
-        <div class="bg-brand-navy/60 absolute inset-0 mix-blend-multiply"></div>
-        <div
-          class="absolute top-0 left-0 h-full w-full bg-[radial-gradient(circle_at_10%_10%,var(--color-brand-orange)_0%,transparent_40%)] opacity-30"
-        >
-        </div>
-      </div>
-
-      <div class="relative z-10 mx-auto max-w-4xl space-y-8 px-4 text-center sm:px-6 lg:px-8">
-        <h2 class="text-4xl leading-tight font-black tracking-tight uppercase sm:text-5xl">
-          Join the Team <br />for House District 53
-        </h2>
-        <p class="text-xl font-medium text-slate-100">
-          This campaign is powered by neighbors like you. Whether you can knock on doors, host an event, or make calls,
-          your support makes the difference.
-        </p>
-        <div class="flex flex-col justify-center gap-4 pt-4 sm:flex-row">
-          <a
-            href="/volunteer"
-            class="text-brand-navy shadow-brand-navy/20 rounded-xl bg-white px-10 py-4 text-center font-black tracking-widest uppercase shadow-xl transition-all hover:bg-slate-50"
-          >
-            Sign Up to Volunteer
-          </a>
-          <a
-            href="/donate"
-            class="bg-brand-orange shadow-brand-orange/20 hover:bg-brand-orange/90 rounded-xl px-10 py-4 text-center font-black tracking-widest text-white uppercase shadow-xl transition-all"
-          >
-            Donate Now
-          </a>
-        </div>
-      </div>
-    </section>
+    </div>
   </main>
 </Layout>

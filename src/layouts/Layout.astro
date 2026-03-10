@@ -5,9 +5,11 @@ import '../styles/global.css'
 
 interface Props {
   title?: string
+  hideNav?: boolean
+  hideFooter?: boolean
 }
 
-const { title = 'Tim Dorr for Georgia' } = Astro.props
+const { title = 'Tim Dorr for Georgia', hideNav = false, hideFooter = false } = Astro.props
 ---
 
 <!doctype html>
@@ -20,9 +22,9 @@ const { title = 'Tim Dorr for Georgia' } = Astro.props
     <title>{title}</title>
   </head>
   <body class="flex min-h-screen flex-col">
-    <Navigation />
+    {!hideNav && <Navigation />}
     <slot />
-    <Footer class="mt-auto" />
+    {!hideFooter && <Footer class="mt-auto" />}
   </body>
 </html>
 
