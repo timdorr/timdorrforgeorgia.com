@@ -2,4 +2,5 @@
 node = "24"
 
 [tasks.dev]
+description = "Start the development server"
 run = "pnpm dev"
